@@ -1,0 +1,26 @@
+:root {
+	--color-sky: /*#2999ff*/blue;
+	--color-waves: #2999ff;
+	
+	--animation-container-height: 150px;
+	
+	--submarine-img-width: 512px;
+	--submarine-img-height: 318px;
+	--submarine-scale: 0.3;
+	--submarine-offset-y: 120px;
+	
+	--wave-img-width: 735px;
+	--wave-img-height: 64px;
+	--wave-padding: 40px;
+	--wave-bg-offset: 27px;
+	
+	--anim-wave-x-duration: 10s;
+	
+	--anim-wave-y-duration: 1s;
+	--anim-wave-y-maxHeight: 10px;
+	
+	--anim-submarine-x-duration: 20s;
+	
+	--anim-submarine-y-duration: 1s;
+	--anim-submarine-y-maxHeight: 10px;
+}

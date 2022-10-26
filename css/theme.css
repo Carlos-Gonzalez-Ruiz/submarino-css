@@ -1,0 +1,21 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+	background-color: var(--color-waves);
+	background-image: linear-gradient(var(--color-sky), var(--color-waves));
+	background-repeat: no-repeat;
+	background-size: 100% 100px;
+	
+	font-family: 'Poppins', 'Liberation Sans', 'Arial', sans-seif;
+}
+
+body {
+	/* Eliminar margen por defecto del <body>. */
+	margin: 0px;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}

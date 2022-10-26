@@ -1,0 +1,50 @@
+@keyframes kf-wave-x {
+	0% {
+		background-position-x: 0px;
+	}
+	100% {
+		background-position-x: var(--wave-img-width);
+	}
+}
+
+@keyframes kf-wave-y {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	100% {
+		transform: translate(0px, var(--anim-wave-y-maxHeight));
+	}
+}
+
+@keyframes kf-submarine-x {
+	0% {
+		left: 0%;
+	}
+	47% {
+		/* Hacia la izquierda del todo, restando la anchura según la escala del submarino. */
+		left: calc(100% - (var(--submarine-img-width) * var(--submarine-scale)));
+		transform: rotateY(0deg);
+	}
+	50% {
+		/* Hacia la izquierda del todo, restando la anchura según la escala del submarino. */
+		left: calc(100% - (var(--submarine-img-width) * var(--submarine-scale)));
+		transform: rotateY(180deg);
+	}
+	97% {
+		left: 0%;
+		transform: rotateY(180deg);
+	}
+	100% {
+		left: 0%;
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes kf-submarine-y {
+	0% {
+		bottom: var(--submarine-offset-y);
+	}
+	100% {
+		bottom: calc(var(--submarine-offset-y) + var(--anim-submarine-y-maxHeight));
+	}
+}

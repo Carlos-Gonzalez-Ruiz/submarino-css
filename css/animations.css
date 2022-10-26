@@ -1,0 +1,71 @@
+#animation-container, #animation-waves {
+	height: var(--animation-container-height);
+}
+
+.animation-wave {
+	background-image: url('../img/waves.png');
+	background-repeat: repeat-x;
+	
+	width: 200%;
+	height: var(--wave-img-height);
+	
+	position: relative;
+}
+
+.animation-wave:nth-child(1) {
+	z-index: 0;
+	
+	/* "Shorthand" → [keyframe] [duration] [timing-function] [iteration-count] [direction] [delay] */
+	animation: 	kf-wave-x var(--anim-wave-x-duration) linear infinite normal -4s,
+			kf-wave-y var(--anim-wave-y-duration) ease-in-out infinite alternate -0.25s;
+}
+
+.animation-wave:nth-child(2) {
+	/* Añadirle offset inicial ""aleatorio"" al background. */
+	right: calc(var(--wave-bg-offset) * 1.5);
+	bottom: var(--wave-padding);
+	
+	z-index: 1;
+	
+	/* "Shorthand" → [keyframe] [duration] [timing-function] [iteration-count] [direction] [delay] */
+	animation: 	kf-wave-x var(--anim-wave-x-duration) linear infinite normal -1s,
+			kf-wave-y var(--anim-wave-y-duration) ease-in-out infinite alternate -0.5s;
+}
+
+.animation-wave:nth-child(3) {
+	/* Añadirle offset inicial ""aleatorio"" al background. */
+	right: calc(var(--wave-bg-offset) * 1.2);
+	bottom: calc(var(--wave-padding) * 2);
+	
+	z-index: 3;
+	
+	/* "Shorthand" → [keyframe] [duration] [timing-function] [iteration-count] [direction] [delay] */
+	animation: 	kf-wave-x var(--anim-wave-x-duration) linear infinite normal -3s,
+			kf-wave-y var(--anim-wave-y-duration) ease-in-out infinite alternate -0.75s;
+}
+
+.animation-wave:nth-child(4) {
+	/* Añadirle offset inicial ""aleatorio"" al background. */
+	right: calc(var(--wave-bg-offset) * 1.7);
+	bottom: calc(var(--wave-padding) * 3);
+	
+	z-index: 4;
+	
+	/* "Shorthand" → [keyframe] [duration] [timing-function] [iteration-count] [direction] [delay] */
+	animation: 	kf-wave-x var(--anim-wave-x-duration) linear infinite normal -6s,
+			kf-wave-y var(--anim-wave-y-duration) ease-in-out infinite alternate -0.35s;
+}
+
+#animation-submarine {
+	width: calc(var(--submarine-img-width) * var(--submarine-scale));
+	height: calc(var(--submarine-img-height) * var(--submarine-scale));
+	
+	position: relative;
+	bottom: var(--submarine-offset-y);
+	
+	z-index: 2;
+	
+	/* "Shorthand" → [keyframe] [duration] [timing-function] [iteration-count] [direction] [delay] */
+	animation: 	kf-submarine-x var(--anim-submarine-x-duration) linear infinite normal,
+			kf-submarine-y var(--anim-submarine-y-duration) ease-in-out infinite alternate -0.35s;
+}
